@@ -10,7 +10,7 @@ import {
 
 const members = [
   {
-    avatar: 'https://blog.zeroc0077.cn/images/avatar.jpeg',
+    avatar: '/zeroc.jpg',
     name: 'zeroc',
     title: '端茶倒水',
     links: [
