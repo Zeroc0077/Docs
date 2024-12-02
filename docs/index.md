@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 快速入门
-      link: /quick-start
+      link: /quick-start/
     - theme: brand
       text: Writeup 合集
       link: /writeups
