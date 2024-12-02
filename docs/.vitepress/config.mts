@@ -32,6 +32,31 @@ export default defineConfig({
           text: '前言',
           link: '/quick-start/',
         },
+        {
+          text: '各方向入门文档',
+          items: [
+            {
+              text: 'Web 安全',
+              link: '/quick-start/web'
+            },
+            {
+              text: 'Pwn 二进制安全',
+              link: '/quick-start/pwn'
+            },
+            {
+              text: 'Reverse 逆向工程',
+              link: '/quick-start/re'
+            },
+            {
+              text: 'Crypto 密码学',
+              link: '/quick-start/crypto'
+            },
+            {
+              text: 'Misc 杂项',
+              link: '/quick-start/misc'
+            },
+          ]
+        }
       ],
 
       '/writeups/': [
@@ -61,9 +86,9 @@ export default defineConfig({
     },
 
     lastUpdated: {
-      text: 'Updated at',
+      text: 'Last Updated at',
       formatOptions: {
-        dateStyle: 'full',
+        dateStyle: 'short',
         timeStyle: 'medium'
       }
     }
