@@ -42,6 +42,14 @@ const members = [
       { icon: 'github', link: 'https://github.com/zzzcccyyyggg' },
     ]
   },
+  {
+    avatar: '/members/elegantcrazy.png',
+    name: 'ElegantCrazy',
+    title: 'Founder, Web 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/ElegantCrazy' },
+    ]
+  },
 ]
 </script>
 
