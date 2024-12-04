@@ -26,6 +26,14 @@ const members = [
     ]
   },
   {
+    avatar: '/members/daidai.jpeg',
+    name: 'daidai',
+    title: 'Pwn 真神',
+    links: [
+      { icon: 'github', link: 'https://github.com/0xdaidai' },
+    ]
+  },
+  {
     avatar: '/members/zeroc.jpg',
     name: 'zeroc',
     title: '端茶倒水',
