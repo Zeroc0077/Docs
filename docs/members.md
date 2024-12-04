@@ -18,6 +18,14 @@ const members = [
       { icon: 'twitter', link: 'https://x.com/zeroc45026434' }
     ]
   },
+  {
+    avatar: '/members/Eurus.jpg',
+    name: 'Eurus',
+    title: 'pwn 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/AkaiEurus' },
+    ]
+  },
 ]
 </script>
 
