@@ -18,9 +18,17 @@ const members = [
     ]
   },
   {
+    avatar: '/members/daidai.jpeg',
+    name: 'daidai',
+    title: 'Pwn 真神',
+    links: [
+      { icon: 'github', link: 'https://github.com/0xdaidai' },
+    ]
+  },
+  {
     avatar: '/members/SSGSS.png',
     name: 'SSGSS',
-    title: 'Previous captain, Web 真神',
+    title: 'Previous Captain, Web 真神',
     links: [
       { icon: 'github', link: 'https://github.com/FYHSSGSS' },
     ]
@@ -34,11 +42,11 @@ const members = [
     ]
   },
   {
-    avatar: '/members/daidai.jpeg',
-    name: 'daidai',
-    title: 'Pwn 真神',
+    avatar: '/members/triplewings.png',
+    name: 'triplewings',
+    title: 'Pwn & 零知识 神',
     links: [
-      { icon: 'github', link: 'https://github.com/0xdaidai' },
+      { icon: 'github', link: 'https://github.com/kfxp12138' },
     ]
   },
   {
