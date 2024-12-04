@@ -81,7 +81,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Hacking for fun',
       copyright: 'Copyright © or4nge'
     },
 
