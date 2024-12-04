@@ -18,9 +18,17 @@ const members = [
     ]
   },
   {
+    avatar: '/members/pil10w.jpg',
+    name: 'pil10w',
+    title: 'Web 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/g00dfe11ow' },
+    ]
+  },
+  {
     avatar: '/members/daidai.jpeg',
     name: 'daidai',
-    title: 'Pwn 真神',
+    title: 'Pwn 神',
     links: [
       { icon: 'github', link: 'https://github.com/0xdaidai' },
     ]
@@ -28,7 +36,7 @@ const members = [
   {
     avatar: '/members/SSGSS.png',
     name: 'SSGSS',
-    title: 'Previous Captain, Web 真神',
+    title: 'Previous Captain, Web 神',
     links: [
       { icon: 'github', link: 'https://github.com/FYHSSGSS' },
     ]
@@ -36,7 +44,7 @@ const members = [
   {
     avatar: '/members/s0uthwood.jpeg',
     name: 's0uthwood',
-    title: 'Reverse 真神',
+    title: 'Reverse 神',
     links: [
       { icon: 'github', link: 'https://github.com/s0uthwood' },
     ]
