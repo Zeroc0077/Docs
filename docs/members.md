@@ -10,6 +10,22 @@ import {
 
 const members = [
   {
+    avatar: '/members/elegantcrazy.png',
+    name: 'ElegantCrazy',
+    title: 'Founder, Web 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/ElegantCrazy' },
+    ]
+  },
+  {
+    avatar: '/members/s0uthwood.jpeg',
+    name: 's0uthwood',
+    title: 'Reverse 真神',
+    links: [
+      { icon: 'github', link: 'https://github.com/s0uthwood' },
+    ]
+  },
+  {
     avatar: '/members/zeroc.jpg',
     name: 'zeroc',
     title: '端茶倒水',
@@ -40,14 +56,6 @@ const members = [
     title: 'Reverse 神',
     links: [
       { icon: 'github', link: 'https://github.com/zzzcccyyyggg' },
-    ]
-  },
-  {
-    avatar: '/members/elegantcrazy.png',
-    name: 'ElegantCrazy',
-    title: 'Founder, Web 神',
-    links: [
-      { icon: 'github', link: 'https://github.com/ElegantCrazy' },
     ]
   },
 ]
