@@ -12,7 +12,7 @@ const members = [
   {
     avatar: '/members/elegantcrazy.png',
     name: 'ElegantCrazy',
-    title: 'Founder, Web 神',
+    title: 'Founder & Web 神',
     links: [
       { icon: 'github', link: 'https://github.com/ElegantCrazy' },
     ]
@@ -36,7 +36,7 @@ const members = [
   {
     avatar: '/members/SSGSS.png',
     name: 'SSGSS',
-    title: 'Previous Captain, Web 神',
+    title: 'Previous Captain & Web 神',
     links: [
       { icon: 'github', link: 'https://github.com/FYHSSGSS' },
     ]
@@ -55,6 +55,22 @@ const members = [
     title: 'Pwn & 零知识 神',
     links: [
       { icon: 'github', link: 'https://github.com/kfxp12138' },
+    ]
+  },
+  {
+    avatar: '/members/hiddener.jpeg',
+    name: 'hiddener',
+    title: 'Previous Captain & Web 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/hidden-er' },
+    ]
+  },
+  {
+    avatar: '/members/Yisel.png',
+    name: 'Yisel',
+    title: 'Reverse 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/YsielX' },
     ]
   },
   {
