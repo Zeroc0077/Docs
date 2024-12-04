@@ -18,6 +18,14 @@ const members = [
     ]
   },
   {
+    avatar: '/members/SSGSS.png',
+    name: 'SSGSS',
+    title: 'Previous captain, Web 真神',
+    links: [
+      { icon: 'github', link: 'https://github.com/FYHSSGSS' },
+    ]
+  },
+  {
     avatar: '/members/s0uthwood.jpeg',
     name: 's0uthwood',
     title: 'Reverse 真神',
