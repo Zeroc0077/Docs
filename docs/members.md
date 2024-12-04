@@ -26,6 +26,14 @@ const members = [
       { icon: 'github', link: 'https://github.com/AkaiEurus' },
     ]
   },
+  {
+    avatar: '/members/Joooooκ.jpeg',
+    name: 'Joooooκ',
+    title: 'Misc 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/Joooook' },
+    ]
+  },
 ]
 </script>
 
