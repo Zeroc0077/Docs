@@ -34,6 +34,14 @@ const members = [
       { icon: 'github', link: 'https://github.com/Joooook' },
     ]
   },
+  {
+    avatar: '/members/zzzccc.png',
+    name: 'zzzccc',
+    title: 'Reverse 神',
+    links: [
+      { icon: 'github', link: 'https://github.com/zzzcccyyyggg' },
+    ]
+  },
 ]
 </script>
 
