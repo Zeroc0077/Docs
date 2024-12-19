@@ -12,6 +12,14 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' }],
     ['link', { rel: 'manifest', href: '/favicon/manifest.json' }]
   ],
+  cleanUrls: true,
+  markdown: {
+    lineNumbers: true,
+    theme: { light: 'github-light', dark: 'github-dark' },
+    image: {
+      lazyLoading: true
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
@@ -76,6 +84,11 @@ export default defineConfig({
       ]
     },
 
+    outline: {
+      level: 'deep',
+      label: 'ToC'
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/or4nge-BUAA' }
     ],
@@ -85,12 +98,21 @@ export default defineConfig({
       copyright: 'Copyright © or4nge'
     },
 
+    editLink: {
+      pattern: 'https://github.com/or4nge-BUAA/Docs/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+
     lastUpdated: {
       text: 'Last Updated at',
       formatOptions: {
         dateStyle: 'short',
         timeStyle: 'medium'
       }
-    }
+    },
+
+    search: {
+      provider: 'local'
+    },
   }
 })
