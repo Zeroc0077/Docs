@@ -76,9 +76,13 @@ export default defineConfig({
           text: '2024',
           items: [
             {
+              text: '第十八届 CISCN 初赛',
+              link: '/writeups/2024/ciscn-18'
+            },
+            {
               text: '第八届强网杯全国网络安全挑战赛线上赛',
               link: '/writeups/2024/qwbs8'
-            }
+            },
           ]
         }
       ]

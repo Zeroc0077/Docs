@@ -6,6 +6,10 @@ layout: doc
 
 # 第八届强网杯全国网络安全挑战赛线上赛 Writeup by or4nge
 
+::: info
+**Rank: 16**
+:::
+
 ## Web
 
 ### PyBlockly
