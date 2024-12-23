@@ -41,7 +41,7 @@ payload：
 }
 ```
 
-![img](assets/qwbs8/img_0.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_0.png)
 
 ### platform
 
@@ -82,25 +82,25 @@ while 1:
 
 `/admin/Authors` 路由可以未授权进入后台：
 
-![img](assets/qwbs8/img_1.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_1.png)
 
 支付设置处可以注入任意代码：
 
-![img](assets/qwbs8/img_2.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_2.png)
 
-![img](assets/qwbs8/img_3.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_3.png)
 
 ### snake
 
 手动玩游戏到 50 分后得到路由： `/snake_win?username=`，测试存在 SQL 注入，通过 union 联合注入发现可以模板注入，直接打 SSTI 即可：
 
-![img](assets/qwbs8/img_4.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_4.png)
 
 ### Proxy
 
 直接 SSRF 到 `/v1/api/flag` 路由即可：
 
-![img](assets/qwbs8/img_5.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_5.png)
 
 ## Pwn
 
@@ -343,7 +343,7 @@ Qemu mips 虚拟机，查看关键逻辑，发现解出来不对
 
 编译一个带符号版本的qemu，与题目给的程序对比，找到疑似作者设置的变量，找交叉引用发现关键逻辑
 
-![img](assets/qwbs8/img_6.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_6.png)
 
 其中 `sub_7F50E936448E` 为实际加密过程，去一下花指令，写出解密脚本
 
@@ -1137,43 +1137,43 @@ print(b''.join([i.to_bytes(4,'little') for i in plaintext]))
 
 ### givemesecret
 
-![img](assets/qwbs8/img_7.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_7.png)
 
 ### Master of DFIR - Phishing
 
 钓鱼邮件解出一个加密压缩包和压缩包密码：
 
-![img](assets/qwbs8/img_8.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_8.png)
 
 可以看到攻击者邮箱：
 
-![img](assets/qwbs8/img_9.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_9.png)
 
 通过压缩包解密可以得到伪装的 msc 文件，查看 msc 文件内容可以看到执行语句在 97 行：
 
-![img](assets/qwbs8/img_10.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_10.png)
 
 通过攻击载核可以看到当前执行 VBScript 代码：
 
-![img](assets/qwbs8/img_11.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_11.png)
 
 通过对 VBScript 解混淆可以看到在 selectnodes 函数的参数如下：
 
-![img](assets/qwbs8/img_12.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_12.png)
 
 通过 ASCII 转换可以知道存放位置为 `/MMC_ConsoleFile/BinaryStorage/Binary[@Name='CONSOLE_MENU']`
 
 通过查询可知加载恶意 ddl 的 MITRE ATT&CK ID 为 T1574：
 
-![img](assets/qwbs8/img_13.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_13.png)
 
 明显 `curl_easy_init` 函数被修改了：
 
-![img](assets/qwbs8/img_14.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_14.png)
 
 解密下一阶段载荷的 key 在函数 `sub_10001240` 中：
 
-![img](assets/qwbs8/img_15.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_15.png)
 
 将对应地址的数据 dump 下来后用以下脚本可以解密：
 
@@ -1226,21 +1226,21 @@ open("dec", "wb").write(bytes(data))
 
 这段载荷主要是远程下载一个 donut 生成的木马，在流量中可以看到：
 
-![img](assets/qwbs8/img_16.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_16.png)
 
 下一阶段载荷的回连地址直接可以看到：
 
-![img](assets/qwbs8/img_17.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_17.png)
 
 最终阶段载荷是使用 donut 生成的，将其从流量包中 dump 下来后使用 https://github.com/volexity/donut-decryptor 可以进行解密，进行反编译可以看到：
 
-![img](assets/qwbs8/img_18.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_18.png)
 
 这里找到 decrypt key 为 ``pJB`-v)t^ZAsP$|r`` 根据其长度猜测加密算法为 AES。
 
 同时在字符串信息中可以发现：
 
-![img](assets/qwbs8/img_19.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_19.png)
 
 使用的是 OrcaC2。
 
@@ -1305,27 +1305,27 @@ Team token > icqae6fbaade616aab87a7d87764ae96
 
 根据上一题可知在下载木马后会通过 WebSocket 传输使用 AES 加密的数据，可以看到 SystemId：
 
-![img](assets/qwbs8/img_20.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_20.png)
 
 对加密数据解密可以看到主机名称：
 
-![img](assets/qwbs8/img_21.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_21.png)
 
 以及下载文件的保存名称：
 
-![img](assets/qwbs8/img_22.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_22.png)
 
 攻击者上传的文件名：
 
-![img](assets/qwbs8/img_23.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_23.png)
 
 tomcat 的用户名和密码：
 
-![img](assets/qwbs8/img_24.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_24.png)
 
 上传的 war 包中主要包含一个 jsp，目的是加载一段字节码，该字节码中包含几个 class，主要逻辑在第二个 class 中，用于加解密的密钥：
 
-![img](assets/qwbs8/img_25.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_25.png)
 
 接下来可以对流量进行解密，使用如下 Cyberchef 规则即可：
 
@@ -1333,21 +1333,21 @@ https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,fal
 
 从流量中可以下载到一个 SQLite 数据库文件：
 
-![img](assets/qwbs8/img_26.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_26.png)
 
 可以在其中找到浩瀚云云存储管理员账户和密码哈希，通过 cmd5 查询可以得到密码：
 
-![img](assets/qwbs8/img_27.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_27.png)
 
-![img](assets/qwbs8/img_28.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_28.png)
 
 在一段恶意字节码中可以找到运行了一个恶意 powershell 脚本，其中设置了计划任务：
 
-![img](assets/qwbs8/img_29.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_29.png)
 
 在后续流量中找到了相关挖矿程序的配置文件，获取到了其回连的矿池域名：
 
-![img](assets/qwbs8/img_30.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_30.png)
 
 ```bash
 ❯ nc 47.104.5.208 9999
@@ -1455,7 +1455,7 @@ for i in range(50):
             break
 ```
 
-![img](assets/qwbs8/img_31.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_31.png)
 
 ### 谍影重重5.0
 
@@ -1496,39 +1496,39 @@ for line in data:
 
 1. 杭州绕城高速
 
-![img](assets/qwbs8/img_32.png)![img](assets/qwbs8/img_33.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_32.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_33.png)
 
 2. 长沙橘子洲大桥
 
-![img](assets/qwbs8/img_34.png)![img](assets/qwbs8/img_35.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_34.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_35.png)
 
 3. 上海崇明岛
 
-![img](assets/qwbs8/img_36.png)![img](assets/qwbs8/img_37.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_36.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_37.png)
 
 4. 青海湖
 
-![img](assets/qwbs8/img_38.png)![img](assets/qwbs8/img_39.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_38.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_39.png)
 
 5. 武汉天兴洲长江大桥
 
-![img](assets/qwbs8/img_40.png)![img](assets/qwbs8/img_41.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_40.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_41.png)
 
 6. 上海路发广场
 
-![img](assets/qwbs8/img_42.png)![img](assets/qwbs8/img_43.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_42.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_43.png)
 
 7. 成都双流国际机场
 
-![img](assets/qwbs8/img_44.png)![img](assets/qwbs8/img_45.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_44.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_45.png)
 
 8. 大报恩寺
 
-![img](assets/qwbs8/img_46.png)![img](assets/qwbs8/img_47.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_46.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_47.png)
 
 9. 重庆万象城
 
-![img](assets/qwbs8/img_48.png)![img](assets/qwbs8/img_49.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_48.png)![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_49.png)
 
 ### AbstractMaze
 
@@ -1693,19 +1693,19 @@ if __name__ == "__main__":
 
 通过堵住如 `(2,2)` 位置每一个向下再返回路径的返回位置让程序认为该路径为 badpath
 
-![img](assets/qwbs8/img_50.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_50.png)
 
 3. challenge3
 
 优先向下。如图即可。
 
-![img](assets/qwbs8/img_51.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_51.png)
 
 4. challenge4
 
 p1 寻路策略是左拐，p2 寻路策略是右拐，用工具点一点找到够长的路线，给 p1 留一段就可以。
 
-![img](assets/qwbs8/img_52.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_52.png)
 
 5. challenge5
 
@@ -1713,7 +1713,7 @@ p1 寻路策略是左拐，p2 寻路策略是右拐，用工具点一点找到�
 
 以 0-3 行为例，可以让返回的色块与来向色块完全重合
 
-![img](assets/qwbs8/img_53.png)
+![img](https://or4nge-images.zeroc0077.cn/writeups/2024/qwbs8/img_53.png)
 
 ```python
 import base64
