@@ -83,6 +83,10 @@ export default defineConfig({
               text: '第八届强网杯全国网络安全挑战赛线上赛',
               link: '/writeups/2024/qwbs8'
             },
+            {
+              text: 'SUCTF 2025',
+              link: '/writeups/2025/suctf2025'
+            },
           ]
         }
       ]
