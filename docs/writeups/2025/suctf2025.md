@@ -611,7 +611,7 @@ contract SolveMagician is Script {
 // SUCTF{C0n9r4ts!Y0u're_An_0ut5taNd1ng_OnchA1n_Ma9ic1an.}
 ```
 
-### SU_AD
+### SU_AD (🩸)
 
 需要解决三种流量的解密问题：
 
