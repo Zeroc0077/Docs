@@ -8,7 +8,7 @@ save_dir = sys.argv[2]
 # check if the save_dir exists
 if not os.path.exists(save_dir):
     print(f"{save_dir} does not exist")
-    sys.exit(1)
+    os.mkdir(save_dir)
 
 # relative path of the md to the save_dir
 relative_path = os.path.relpath(save_dir, os.path.dirname(md_path))
