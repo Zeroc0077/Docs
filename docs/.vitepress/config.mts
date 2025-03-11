@@ -87,6 +87,10 @@ export default defineConfig({
               text: 'SUCTF 2025',
               link: '/writeups/2025/suctf2025'
             },
+            {
+              text: "TPCTF 2025",
+              link: '/writeups/2025/tpctf2025'
+            },
           ]
         }
       ]
