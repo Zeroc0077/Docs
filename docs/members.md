@@ -79,7 +79,7 @@ const members = [
     title: '端茶倒水',
     links: [
       { icon: 'github', link: 'https://github.com/Zeroc0077' },
-      { icon: 'twitter', link: 'https://x.com/zeroc45026434' }
+      { icon: 'twitter', link: 'https://x.com/zeroc0077' }
     ]
   },
   {
